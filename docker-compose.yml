@@ -2,14 +2,14 @@ version: "2"
 services:
   app:
     build: ./app
-    container_name: "Flash_App"
+    container_name: "Flask_App"
     links:
       - db
     ports:
       - "5000:5000"
 
   db:
-    image: library/mysql:5.7
+    image: mysql:5.7
     container_name: "MySQL_Database"
     ports:
       - "32000:3306"

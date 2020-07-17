@@ -13,6 +13,7 @@ def cities_import() -> List[Dict]:
         'port': '3396',
         'database': 'citiesData'
     }
+
     connection = mysql.connector.connect(**config)
     cursor = connection.cursor(dictionary=True)
 
